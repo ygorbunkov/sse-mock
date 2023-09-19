@@ -1,0 +1,1 @@
+export const sseDataDecorator = data => `data: ${JSON.stringify(data)}\n\n`

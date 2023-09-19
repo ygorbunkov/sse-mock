@@ -1,0 +1,15 @@
+version: '3'
+services:
+  ssemock:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ${IMAGE_TAG}:latest
+    ports:
+      - "${PORT}:${PORT}"
+    tty: true
+    stdin_open: true
+    env_file:
+      - .env
+    volumes:
+      - ${VOLUME_PATH}:/app/responses
